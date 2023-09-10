@@ -1,0 +1,65 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+.main-container {
+  --bg-image: url(images/brain.png);
+  --bg-opacity: 0.25;
+
+  width: 100%;
+  height: auto;
+  isolation: isolate;
+}
+
+.main-container::after {
+  content: "";
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: var(--bg-opacity);
+}
+
+.survey-container {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+
+.survey-form {
+  background-color: hsla(285, 88%, 60%, 0.505);
+  border-radius: 10px;
+  text-align: left;
+  padding: 2% 5% 3%;
+  margin: 3%;
+}
+label {
+  display: block;
+  margin: 1rem 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="submit"],
+select,
+textarea {
+  width: 100%;
+  border-radius: 2.5px;
+  border-style: none;
+  padding: 1%;
+}
+
+#submit-button {
+  text-align: center;
+  width: 35%;
+  display: block;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset {
+  border-style: none;
+}
